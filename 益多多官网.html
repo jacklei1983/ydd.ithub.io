@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>重庆益多多科技有限公司 - 信息赋能决策，科技守护健康</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif;
+    }
+
+    body {
+      background: #f0f2f5;
+      color: #333;
+      line-height: 1.7;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* 导航栏 - 粘性固定，适配移动端 */
+    nav {
+      background: #0047ab;
+      color: white;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 999;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .nav-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+
+    .menu a {
+      font-size: 1rem;
+      transition: opacity 0.3s;
+    }
+
+    .menu a:hover {
+      opacity: 0.8;
+    }
+
+    /* 头部横幅 - 渐变背景，贴合企业slogan */
+    header {
+      background: linear-gradient(135deg, #0047ab 0%, #005fcc 100%);
+      color: white;
+      padding: 6rem 0;
+      text-align: center;
+      clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+      margin-bottom: 3rem;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1.2rem;
+      font-weight: 600;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      opacity: 0.95;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* 通用模块样式 - 卡片/板块统一风格 */
+    .section-title {
+      color: #0047ab;
+      margin-bottom: 2rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 3px solid #0047ab;
+      display: inline-block;
+      font-size: 1.8rem;
+    }
+
+    section {
+      background: white;
+      padding: 3rem 2rem;
+      margin-bottom: 3rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .card-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .card {
+      padding: 2rem;
+      border-radius: 8px;
+      border: 1px solid #e8e8e8;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,71,171,0.1);
+    }
+
+    .card h3 {
+      color: #0047ab;
+      margin-bottom: 1.2rem;
+      font-size: 1.5rem;
+    }
+
+    .card p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .sub-title {
+      color: #0047ab;
+      font-size: 1.3rem;
+      margin: 2rem 0 1rem;
+      font-weight: 600;
+    }
+
+    .list-item {
+      margin: 0.8rem 0;
+      padding-left: 1rem;
+      border-left: 3px solid #0047ab;
+    }
+
+    /* 按钮样式 */
+    .btn {
+      display: inline-block;
+      background: white;
+      color: #0047ab;
+      padding: 0.8rem 2rem;
+      border-radius: 4px;
+      font-weight: bold;
+      margin-top: 2rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 15px rgba(0,71,171,0.2);
+    }
+
+    /* 底部样式 */
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 3rem 0;
+      margin-top: 5rem;
+      border-top: 5px solid #0047ab;
+    }
+
+    footer p {
+      opacity: 0.9;
+      margin: 0.5rem 0;
+    }
+
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      header {
+        padding: 4rem 0;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1.1rem;
+      }
+      .logo {
+        font-size: 1.5rem;
+      }
+      .section-title {
+        font-size: 1.5rem;
+      }
+      section {
+        padding: 2rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 导航栏 - 匹配PPT核心板块 -->
+  <nav>
+    <div class="container nav-wrap">
+      <div class="logo">益多多科技</div>
+      <div class="menu">
+        <a href="#home">首页</a>
+        <a href="#about">公司简介</a>
+        <a href="#business">核心业务</a>
+        <a href="#product">核心产品</a>
+        <a href="#advantage">核心优势</a>
+        <a href="#vision">未来展望</a>
+        <a href="#contact">联系我们</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 头部横幅 - 企业slogan+名称 -->
+  <header id="home">
+    <div class="container">
+      <h1>重庆益多多科技有限公司</h1>
+      <p>信息赋能决策，科技守护健康</p>
+      <a href="#contact" class="btn">携手共赢</a>
+    </div>
+  </header>
+
+  <!-- 主体内容 - 完全匹配PPT结构 -->
+  <div class="container">
+    <!-- 公司简介 - PPT01板块 -->
+    <section id="about">
+      <h2 class="section-title">公司简介</h2>
+      <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">我们是聚焦<span style="color: #0047ab; font-weight: 600;">产业服务与医疗数字化领域</span>的综合型科技服务企业，秉持专业、高效、精准、共赢的服务理念，为客户提供全链路定制化解决方案。</p>
+      <div class="card-wrapper">
+        <div class="card">
+          <h3>企业使命</h3>
+          <p>信息赋能决策，科技守护健康</p>
+        </div>
+        <div class="card">
+          <h3>服务对象</h3>
+          <p>政府机构与上市公司<br>实体企业与医疗健康机构</p>
+        </div>
+        <div class="card">
+          <h3>价值主张</h3>
+          <p>把握市场机遇，优化运营效率，驱动价值增长，实现可持续发展</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 核心业务 - PPT02+03板块 -->
+    <section id="business">
+      <h2 class="section-title">核心业务</h2>
+      <div class="card-wrapper">
+        <div class="card">
+          <h3>产业信息咨询服务</h3>
+          <p>深耕产业投资与工程建设领域，打通信息壁垒，规避经营风险，精准匹配优质资源，助力客户高效决策。</p>
+          <p class="sub-title">核心服务方向</p>
+          <p class="list-item">上市公司投资项目信息咨询</p>
+          <p class="list-item">跨国/跨省产业投资项目信息咨询</p>
+          <p class="list-item">工程项目招投标信息咨询</p>
+          <p class="list-item">工程劳务项目信息咨询</p>
+        </div>
+        <div class="card">
+          <h3>医疗信息化解决方案</h3>
+          <p>以数字化技术赋能基层医疗与公共卫生体系建设，打造全场景医疗信息化产品与服务，推动优质医疗资源下沉升级。</p>
+          <p class="sub-title">核心服务价值</p>
+          <p class="list-item">重构医疗服务流程，提升运行效率</p>
+          <p class="list-item">全场景产品覆盖，满足多元需求</p>
+          <p class="list-item">助力服务下沉，惠及基层群众</p>
+          <p class="list-item">打通数据链路，优化公共卫生管理</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 核心产品 - PPT04板块 -->
+    <section id="product">
+      <h2 class="section-title">核心产品</h2>
+      <div class="card-wrapper">
+        <div class="card">
+          <h3>连百合微体检平台</h3>
+          <p class="sub-title">核心技术</p>
+          <p>依托先进红外检测技术，精准捕捉人体热辐射信息，实现无接触式健康数据采集。</p>
+          <p class="sub-title">产品特点</p>
+          <p>无创、便捷、高效，无需抽血化验，快速完成初步健康筛查。</p>
+          <p class="sub-title">核心功能</p>
+          <p>多维度分析健康指标，系统自动生成可视化专业评估报告，辅助健康决策。</p>
+          <p class="sub-title">应用场景</p>
+          <p>社区卫生服务中心、乡镇卫生院、专业健康管理机构、企事业单位体检</p>
+        </div>
+        <div class="card">
+          <h3>县域公共卫生平台代理销售</h3>
+          <p class="sub-title">官方授权服务</p>
+          <p>为县域卫健委及基层医疗机构提供全流程数字化服务，助力区域公共卫生能力提升。</p>
+          <p class="sub-title">全流程服务体系</p>
+          <p>覆盖平台销售、落地部署、运营支持三大核心环节，确保服务闭环。</p>
+          <p class="sub-title">数字化升级价值</p>
+          <p>打通数据链路，优化服务流程，全面提升区域公共卫生应急与常态化管理能力。</p>
+          <p class="sub-title">核心服务对象</p>
+          <p>县域卫健委、社区卫生服务中心、乡镇卫生院等基层医疗机构</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 核心优势 - PPT提炼核心亮点 -->
+    <section id="advantage">
+      <h2 class="section-title">核心优势</h2>
+      <div class="card-wrapper">
+        <div class="card">
+          <h3>深厚的行业资源积累</h3>
+          <p>深耕行业多年，整合全球优质资源，构建广泛而稳固的合作网络，为业务拓展提供强力支撑。</p>
+        </div>
+        <div class="card">
+          <h3>专业的服务团队</h3>
+          <p>汇聚行业精英，拥有丰富实战经验与专业素养，以客户需求为导向，提供贴心高效的服务体验。</p>
+        </div>
+        <div class="card">
+          <h3>强大的数字化技术能力</h3>
+          <p>自主研发核心技术平台，融合AI与大数据分析，实现业务流程智能化，驱动企业数字化转型。</p>
+        </div>
+        <div class="card">
+          <h3>全链路的定制化解决方案</h3>
+          <p>从需求分析到落地执行，提供端到端定制服务，灵活适配不同场景，助力客户解决核心痛点。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 未来展望 - PPT05板块 -->
+    <section id="vision">
+      <h2 class="section-title">未来展望</h2>
+      <p style="font-size: 1.1rem; text-align: center; max-width: 900px; margin: 0 auto 2rem;">持续深耕产业服务与医疗数字化两大核心赛道，以更专业的解决方案、更优质的服务体验，与合作伙伴携手共进，共创价值、共赢未来！</p>
+      <div class="card-wrapper">
+        <div class="card" style="text-align: center;">
+          <h3>核心赛道深耕</h3>
+          <p>聚焦产业服务 & 医疗数字化，做深做透核心领域</p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <h3>技术实力优化</h3>
+          <p>打磨专业解决方案 & 升级优质服务体验，提升核心竞争力</p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <h3>伙伴携手共进</h3>
+          <p>秉持共创价值 & 共赢未来理念，构建长期合作生态</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 联系我们 - 企业基础信息 -->
+    <section id="contact">
+      <h2 class="section-title">联系我们</h2>
+      <div style="font-size: 1.1rem; line-height: 2; max-width: 600px; margin: 0 auto;">
+        <p><strong>公司名称：</strong>重庆益多多科技有限公司</p>
+        <p><strong>企业理念：</strong>信息赋能决策，科技守护健康</p>
+        <p><strong>服务宗旨：</strong>专业 · 高效 · 精准 · 共赢</p>
+        <p><strong>商务合作：</strong>15123388491</p>
+        <p><strong>公司地址：</strong>重庆市九龙坡区二郎留学生创业园B座</p>
+      </div>
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="#" class="btn">立即洽谈合作</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- 底部版权信息 -->
+  <footer>
+    <div class="container">
+      <p>© 2026 重庆益多多科技有限公司 版权所有</p>
+      <p>信息赋能决策 · 科技守护健康</p>
+      <p>渝ICP备XXXXXXXX号（请替换为真实备案号）</p>
+    </div>
+  </footer>
+</body>
+</html>
